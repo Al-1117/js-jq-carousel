@@ -10,7 +10,10 @@ $(document).ready(
     $(next).click(
       function (){
         scorreriProssimo();
+
+        // $('.images .active').css('filter', 'grayscale', '(0.5)');
       }
+
     );
 
     // per scorrere al precedente utilizzando la funzione creata
@@ -21,6 +24,10 @@ $(document).ready(
         scorriPrecedente();
       }
     );
+    // Cambio lo sfondo
+    $('body').css('background', '#0ace99');
+
+
 
   }
 );
