@@ -35,7 +35,7 @@
 
 }
 
-.slider-wrapper .images img.active:active{
+.slider-wrapper .images img.active:hover{
   border-radius: 50%;
   filter: grayscale(0.5);
 }
