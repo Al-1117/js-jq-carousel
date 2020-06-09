@@ -33,16 +33,24 @@ function scorreriProssimo(){
   var immagineCorrente = $('.slider-wrapper .images .active');
   var immaginePrima = $('.images .first');
 
+  var indicatoreCorrente = $('.nav .active');
+  var indicatorePrimo = $('.nav .first');
+
   // Gli tolgo la classe active
   $(immagineCorrente).removeClass('active');
+  $(indicatoreCorrente).removeClass('active');
+
 
   // se l'immagine corrente è lultimo, gli do la classe active per farlo tornare alla prima immagine
-  if (immagineCorrente.hasClass('last')) {
+  if (immagineCorrente.hasClass('last') && (indicatoreCorrente.hasClass('last'))) {
     $(immaginePrima).addClass('active');
+    $(indicatorePrimo).addClass('active');
+
 
     // altrimenti aggiungo la classe active all'immagine successiva facendo scorrere lo slider
   } else {
     immagineCorrente.next('img').addClass('active');
+    indicatoreCorrente.next('i').addClass('active');
   }
 
 }
